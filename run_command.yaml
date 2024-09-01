@@ -1,0 +1,15 @@
+---
+- hosts: "{{ hostname }}"
+  gather_facts: no
+  tasks:
+    - name: run command
+      shell: "{{ cmd }}"
+      register: out
+      failed_when: out.rc != 0
+    - name: print output
+      debug:
+        msg: "{{ out.stdout }}"
+    - name: Reboot
+      reboot:
+        post_reboot_delay: 60
+      when: reboot | default(false) | bool

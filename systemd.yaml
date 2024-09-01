@@ -1,0 +1,9 @@
+---
+- hosts: "{{ hostname }}"
+  gather_facts: no
+  tasks:
+    - name: Enable systemd service
+      ansible.builtin.systemd_service:
+        enabled: true
+        name: "{{ systemd_service_name }}"
+        state: started
