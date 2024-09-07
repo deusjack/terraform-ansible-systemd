@@ -9,7 +9,7 @@ module "unit_files" {
 resource "ansible_playbook" "systemd_daemon_reload" {
   depends_on              = [module.unit_files]
   name                    = var.hostname
-  playbook                = "${path.root}/../ansible/run_command.yaml"
+  playbook                = "${path.module}/run_command.yaml"
   replayable              = false
   ignore_playbook_failure = false
   extra_vars = {
@@ -26,7 +26,7 @@ resource "ansible_playbook" "systemd_daemon_reload" {
 resource "ansible_playbook" "vault_systemd" {
   depends_on              = [ansible_playbook.systemd_daemon_reload]
   name                    = var.hostname
-  playbook                = "${path.root}/../ansible/systemd.yaml"
+  playbook                = "${path.module}/systemd.yaml"
   replayable              = false
   ignore_playbook_failure = false
   extra_vars = {
