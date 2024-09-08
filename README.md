@@ -36,6 +36,7 @@ Terraform module to manage a systemd unit on Linux with Ansible
 |------|------|
 | [ansible_playbook.systemd_daemon_reload](https://registry.terraform.io/providers/ansible/ansible/latest/docs/resources/playbook) | resource |
 | [ansible_playbook.vault_systemd](https://registry.terraform.io/providers/ansible/ansible/latest/docs/resources/playbook) | resource |
+| [null_resource.external](https://registry.terraform.io/providers/hashicorp/null/latest/docs/resources/resource) | resource |
 | [null_resource.run_command](https://registry.terraform.io/providers/hashicorp/null/latest/docs/resources/resource) | resource |
 | [null_resource.systemd](https://registry.terraform.io/providers/hashicorp/null/latest/docs/resources/resource) | resource |
 | [null_resource.unit_files](https://registry.terraform.io/providers/hashicorp/null/latest/docs/resources/resource) | resource |
@@ -46,6 +47,7 @@ Terraform module to manage a systemd unit on Linux with Ansible
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_content"></a> [content](#input\_content) | n/a | <pre>object({<br>    service = optional(string, null)<br>    timer   = optional(string, null)<br>  })</pre> | `{}` | no |
+| <a name="input_external_triggers"></a> [external\_triggers](#input\_external\_triggers) | Triggers for rerunning the directory playbook except variables | `map(string)` | `{}` | no |
 | <a name="input_hostname"></a> [hostname](#input\_hostname) | The hostname of linux machine the directory will be created on | `string` | n/a | yes |
 | <a name="input_unit_name"></a> [unit\_name](#input\_unit\_name) | Name of the systemd unit. | `string` | n/a | yes |
 | <a name="input_unit_type"></a> [unit\_type](#input\_unit\_type) | Type of the systemd unit | `string` | `"service"` | no |

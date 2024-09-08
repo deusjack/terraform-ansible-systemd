@@ -15,6 +15,14 @@ resource "null_resource" "run_command" {
 }
 
 #####################
+# external triggers #
+#####################
+
+resource "null_resource" "external" {
+  triggers = var.external_triggers
+}
+
+#####################
 # unit_files #
 #####################
 

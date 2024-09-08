@@ -18,7 +18,8 @@ resource "ansible_playbook" "systemd_daemon_reload" {
   lifecycle {
     replace_triggered_by = [
       null_resource.run_command,
-      null_resource.unit_files
+      null_resource.unit_files,
+      null_resource.external
     ]
   }
 }
@@ -35,7 +36,8 @@ resource "ansible_playbook" "vault_systemd" {
   lifecycle {
     replace_triggered_by = [
       null_resource.systemd,
-      null_resource.unit_files
+      null_resource.unit_files,
+      null_resource.external
     ]
   }
 }
