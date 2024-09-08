@@ -9,16 +9,6 @@ variable "unit_name" {
   description = "Name of the systemd unit."
 }
 
-variable "unit_type" {
-  type        = string
-  default     = "service"
-  description = "Type of the systemd unit"
-  validation {
-    condition     = contains(["service", "timer"], var.unit_type)
-    error_message = "Supported values are service or timer."
-  }
-}
-
 variable "content" {
   type = object({
     service = optional(string, null)

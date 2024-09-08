@@ -40,7 +40,6 @@ No resources.
 | <a name="input_content"></a> [content](#input\_content) | n/a | <pre>object({<br>    service = optional(string, null)<br>    timer   = optional(string, null)<br>  })</pre> | n/a | yes |
 | <a name="input_hostname"></a> [hostname](#input\_hostname) | The hostname of linux machine the directory will be created on | `string` | n/a | yes |
 | <a name="input_unit_name"></a> [unit\_name](#input\_unit\_name) | Name of the systemd unit. | `string` | n/a | yes |
-| <a name="input_unit_type"></a> [unit\_type](#input\_unit\_type) | Type of the systemd unit | `string` | `"service"` | no |
 
 ## Outputs
 

@@ -3,7 +3,7 @@ module "service_file" {
   source   = "git@github.com:deusjack/module-file.git?ref=1.0.0"
   hostname = var.hostname
   content  = var.content.service
-  path     = "/etc/systemd/system/${var.unit_name}.${var.unit_type}"
+  path     = "/etc/systemd/system/${var.unit_name}.service"
   mode     = "0644"
 }
 
@@ -12,6 +12,6 @@ module "timer_file" {
   source   = "git@github.com:deusjack/module-file.git?ref=1.0.0"
   hostname = var.hostname
   content  = var.content.timer
-  path     = "/etc/systemd/system/${var.unit_name}.${var.unit_type}"
+  path     = "/etc/systemd/system/${var.unit_name}.timer"
   mode     = "0644"
 }

@@ -2,7 +2,6 @@ module "unit_files" {
   source    = "./modules/unit_files"
   hostname  = var.hostname
   unit_name = var.unit_name
-  unit_type = var.unit_type
   content   = var.content
 }
 
