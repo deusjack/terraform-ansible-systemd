@@ -34,8 +34,8 @@ Terraform module to manage a systemd unit on Linux with Ansible
 
 | Name | Type |
 |------|------|
+| [ansible_playbook.systemd](https://registry.terraform.io/providers/ansible/ansible/latest/docs/resources/playbook) | resource |
 | [ansible_playbook.systemd_daemon_reload](https://registry.terraform.io/providers/ansible/ansible/latest/docs/resources/playbook) | resource |
-| [ansible_playbook.vault_systemd](https://registry.terraform.io/providers/ansible/ansible/latest/docs/resources/playbook) | resource |
 | [null_resource.external](https://registry.terraform.io/providers/hashicorp/null/latest/docs/resources/resource) | resource |
 | [null_resource.run_command](https://registry.terraform.io/providers/hashicorp/null/latest/docs/resources/resource) | resource |
 | [null_resource.systemd](https://registry.terraform.io/providers/hashicorp/null/latest/docs/resources/resource) | resource |

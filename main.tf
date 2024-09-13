@@ -23,7 +23,7 @@ resource "ansible_playbook" "systemd_daemon_reload" {
   }
 }
 
-resource "ansible_playbook" "vault_systemd" {
+resource "ansible_playbook" "systemd" {
   depends_on              = [ansible_playbook.systemd_daemon_reload]
   name                    = var.hostname
   playbook                = "${path.module}/systemd.yaml"
