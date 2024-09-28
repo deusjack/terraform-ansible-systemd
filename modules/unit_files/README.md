@@ -9,7 +9,7 @@ Terraform module to conditionally create unit files
 
 # Terraform Docs
 
-<!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+<!-- BEGIN_TF_DOCS -->
 ## Requirements
 
 | Name | Version |
@@ -26,8 +26,8 @@ No providers.
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_service_file"></a> [service\_file](#module\_service\_file) | git@github.com:deusjack/module-file.git | 1.0.0 |
-| <a name="module_timer_file"></a> [timer\_file](#module\_timer\_file) | git@github.com:deusjack/module-file.git | 1.0.0 |
+| <a name="module_service_file"></a> [service\_file](#module\_service\_file) | git@github.com:deusjack/terraform-ansible-file.git | 1.0.0 |
+| <a name="module_timer_file"></a> [timer\_file](#module\_timer\_file) | git@github.com:deusjack/terraform-ansible-file.git | 1.0.0 |
 
 ## Resources
 
@@ -46,4 +46,4 @@ No resources.
 | Name | Description |
 |------|-------------|
 | <a name="output_triggers"></a> [triggers](#output\_triggers) | Trigger for unit file changes to be used by other null\_resources/modules |
-<!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+<!-- END_TF_DOCS -->
