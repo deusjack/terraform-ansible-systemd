@@ -1,6 +1,6 @@
 repos:
   - repo: https://github.com/antonbabenko/pre-commit-terraform
-    rev: v1.96.1
+    rev: v1.100.0
     hooks:
       - id: terraform_fmt
       - id: terraform_validate
@@ -15,7 +15,7 @@ repos:
           - --hook-config=--add-to-existing-file=true
           - --hook-config=--create-file-if-not-exist=true
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.6.0
+    rev: v6.0.0
     hooks:
       - id: trailing-whitespace
       - id: check-json

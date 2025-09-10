@@ -16,7 +16,6 @@ Terraform module to conditionally create unit files
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.8 |
 | <a name="requirement_ansible"></a> [ansible](#requirement\_ansible) | >= 1, < 2 |
-| <a name="requirement_null"></a> [null](#requirement\_null) | >= 3, < 4 |
 
 ## Providers
 
@@ -26,8 +25,8 @@ No providers.
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_service_file"></a> [service\_file](#module\_service\_file) | git@github.com:deusjack/terraform-ansible-file.git | 1.0.0 |
-| <a name="module_timer_file"></a> [timer\_file](#module\_timer\_file) | git@github.com:deusjack/terraform-ansible-file.git | 1.0.0 |
+| <a name="module_service_file"></a> [service\_file](#module\_service\_file) | git@github.com:deusjack/terraform-ansible-file.git | 1.1.0 |
+| <a name="module_timer_file"></a> [timer\_file](#module\_timer\_file) | git@github.com:deusjack/terraform-ansible-file.git | 1.1.0 |
 
 ## Resources
 
@@ -45,5 +44,5 @@ No resources.
 
 | Name | Description |
 |------|-------------|
-| <a name="output_triggers"></a> [triggers](#output\_triggers) | Trigger for unit file changes to be used by other null\_resources/modules |
+| <a name="output_triggers"></a> [triggers](#output\_triggers) | Trigger for unit file changes to be used by other terraform\_data/modules |
 <!-- END_TF_DOCS -->

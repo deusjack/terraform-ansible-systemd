@@ -16,9 +16,9 @@ resource "ansible_playbook" "systemd_daemon_reload" {
   }
   lifecycle {
     replace_triggered_by = [
-      null_resource.run_command,
-      null_resource.unit_files,
-      null_resource.external
+      terraform_data.run_command,
+      terraform_data.unit_files,
+      terraform_data.external
     ]
   }
 }
@@ -34,9 +34,9 @@ resource "ansible_playbook" "systemd" {
   }
   lifecycle {
     replace_triggered_by = [
-      null_resource.systemd,
-      null_resource.unit_files,
-      null_resource.external
+      terraform_data.systemd,
+      terraform_data.unit_files,
+      terraform_data.external
     ]
   }
 }
