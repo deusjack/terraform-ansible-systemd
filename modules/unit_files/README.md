@@ -25,8 +25,8 @@ No providers.
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_service_file"></a> [service\_file](#module\_service\_file) | git@github.com:deusjack/terraform-ansible-file.git | 1.1.0 |
-| <a name="module_timer_file"></a> [timer\_file](#module\_timer\_file) | git@github.com:deusjack/terraform-ansible-file.git | 1.1.0 |
+| <a name="module_service_file"></a> [service\_file](#module\_service\_file) | git@github.com:deusjack/terraform-ansible-file.git | 1.1.1 |
+| <a name="module_timer_file"></a> [timer\_file](#module\_timer\_file) | git@github.com:deusjack/terraform-ansible-file.git | 1.1.1 |
 
 ## Resources
 
