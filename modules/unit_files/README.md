@@ -15,7 +15,6 @@ Terraform module to conditionally create unit files
 | Name | Version |
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.8 |
-| <a name="requirement_ansible"></a> [ansible](#requirement\_ansible) | >= 1, < 2 |
 
 ## Providers
 
@@ -25,8 +24,8 @@ No providers.
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_service_file"></a> [service\_file](#module\_service\_file) | git@github.com:deusjack/terraform-ansible-file.git | 1.1.1 |
-| <a name="module_timer_file"></a> [timer\_file](#module\_timer\_file) | git@github.com:deusjack/terraform-ansible-file.git | 1.1.1 |
+| <a name="module_service_file"></a> [service\_file](#module\_service\_file) | git@github.com:deusjack/terraform-ansible-file.git | 2.0.0 |
+| <a name="module_timer_file"></a> [timer\_file](#module\_timer\_file) | git@github.com:deusjack/terraform-ansible-file.git | 2.0.0 |
 
 ## Resources
 

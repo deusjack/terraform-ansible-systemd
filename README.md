@@ -14,13 +14,11 @@ Terraform module to manage a systemd unit on Linux with Ansible
 | Name | Version |
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.8 |
-| <a name="requirement_ansible"></a> [ansible](#requirement\_ansible) | >= 1, < 2 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_ansible"></a> [ansible](#provider\_ansible) | 1.3.0 |
 | <a name="provider_terraform"></a> [terraform](#provider\_terraform) | n/a |
 
 ## Modules
@@ -33,13 +31,7 @@ Terraform module to manage a systemd unit on Linux with Ansible
 
 | Name | Type |
 |------|------|
-| [ansible_playbook.systemd](https://registry.terraform.io/providers/ansible/ansible/latest/docs/resources/playbook) | resource |
-| [ansible_playbook.systemd_daemon_reload](https://registry.terraform.io/providers/ansible/ansible/latest/docs/resources/playbook) | resource |
-| [terraform_data.external](https://registry.terraform.io/providers/hashicorp/terraform/latest/docs/resources/data) | resource |
-| [terraform_data.run_command](https://registry.terraform.io/providers/hashicorp/terraform/latest/docs/resources/data) | resource |
 | [terraform_data.systemd](https://registry.terraform.io/providers/hashicorp/terraform/latest/docs/resources/data) | resource |
-| [terraform_data.unit_files](https://registry.terraform.io/providers/hashicorp/terraform/latest/docs/resources/data) | resource |
-| [terraform_data.variables](https://registry.terraform.io/providers/hashicorp/terraform/latest/docs/resources/data) | resource |
 
 ## Inputs
 

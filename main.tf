@@ -5,38 +5,34 @@ module "unit_files" {
   content   = var.content
 }
 
-resource "ansible_playbook" "systemd_daemon_reload" {
-  depends_on              = [module.unit_files]
-  name                    = var.hostname
-  playbook                = "${path.module}/run_command.yaml"
-  replayable              = false
-  ignore_playbook_failure = false
-  extra_vars = {
-    cmd = "systemctl daemon-reload"
+resource "terraform_data" "systemd" {
+  depends_on = [module.unit_files]
+  input = jsonencode({
+    unit_name       = var.unit_name
+    unit_type       = var.unit_type
+    content_service = var.content.service != null ? var.content.service : ""
+    content_timer   = var.content.timer != null ? var.content.timer : ""
+    external        = var.external_triggers
+    unit_files      = module.unit_files.triggers
+  })
+
+  connection {
+    host = jsondecode(self.output).hostname
+    user = "root"
   }
-  lifecycle {
-    replace_triggered_by = [
-      terraform_data.run_command,
-      terraform_data.unit_files,
-      terraform_data.external
+
+  provisioner "remote-exec" {
+    when = create
+    inline = [
+      "systemctl daemon-reload",
+      "systemctl enable --now ${jsondecode(self.output).unit_name}.${jsondecode(self.output).unit_type}",
     ]
   }
-}
 
-resource "ansible_playbook" "systemd" {
-  depends_on              = [ansible_playbook.systemd_daemon_reload]
-  name                    = var.hostname
-  playbook                = "${path.module}/systemd.yaml"
-  replayable              = false
-  ignore_playbook_failure = false
-  extra_vars = {
-    systemd_service_name = "${var.unit_name}.${var.unit_type}"
-  }
-  lifecycle {
-    replace_triggered_by = [
-      terraform_data.systemd,
-      terraform_data.unit_files,
-      terraform_data.external
+  provisioner "remote-exec" {
+    when = destroy
+    inline = [
+      "systemctl disable --now ${jsondecode(self.output).unit_name}.${jsondecode(self.output).unit_type}",
     ]
   }
 }
